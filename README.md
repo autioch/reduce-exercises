@@ -1,4 +1,4 @@
-# Reduce excercises
+# Reduce exercises
 Simple examples for using reduce function.
 
 ## Sum of numbers
@@ -132,8 +132,57 @@ arr.reduce((acc, key) => [...acc, callbackFn(key)], []);
 ```
 </details>
 
+## Single level flatten
 
-## Invert keys with values
+Input
+```javascript
+[
+  1,
+  [2, 3],
+  4,
+  [5, 6]
+]
+```
+
+Output
+```javascript
+[1, 2, 3, 4, 5, 6]
+```
+
+<details>
+  <summary>Solution</summary>
+
+```javascript
+INPUT.reduce((arr, item) => arr.concat(item), []);
+```
+</details>
+
+
+## Item with largest value
+
+Input
+```javascript
+[
+  { id: 1, value: 3 },
+  { id: 2, value: 1 },
+  { id: 3, value: 2 }
+]
+```
+
+Output
+```javascript
+{ id: 1, value: 3 }
+```
+
+<details>
+  <summary>Solution</summary>
+
+```javascript
+INPUT.reduce((top, item) => top.value > item.value ? top: item);
+```
+</details>
+
+## Invert object keys with values
 
 Input
 ```javascript
