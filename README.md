@@ -356,7 +356,7 @@ Output
   <summary>Solution</summary>
 
 ```javascript
-INPUT.reduce((arr, key) => arr.includes(key) ? arr : [...arr, key], input);
+INPUT.reduce((arr, key) => arr.includes(key) ? arr : [...arr, key], []);
 ```
 </details>
 
@@ -364,7 +364,7 @@ INPUT.reduce((arr, key) => arr.includes(key) ? arr : [...arr, key], input);
   <summary>Reduce free solution 1</summary>
 
 ```javascript
-['a', 'b', 'b'].filter(function(item)  {return this[item] ? false : (this[item] = true)}, {})
+INPUT.filter(function(item)  {return this[item] ? false : (this[item] = true)}, {})
 ```
 </details>
 
