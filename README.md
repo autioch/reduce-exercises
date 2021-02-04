@@ -281,7 +281,7 @@ Output
   <summary>Solution</summary>
 
 ```javascript
-INPUT.reduce((arr, sentence) => [...arr, sentence.split(' ')], []);
+INPUT.reduce((arr, sentence) => [...arr, ...sentence.split(' ')], []);
 ```
 </details>
 
